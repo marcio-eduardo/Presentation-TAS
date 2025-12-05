@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAS - Trabalho de Empreendedorismo</title>
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SLIDE 1: CAPA ================= -->
+    <div class="slide-container title-slide">
+
+        <h1>TAS</h1>
+        <h2>TRUST ASSIST SYSTEM</h2>
+
+        <!-- Informações com layout original restaurado -->
+        <div class="student-info">
+            <p><strong>Disciplina:</strong> EMPREENDEDORISMO</p>
+            <p><strong>Professor Tutor:</strong> Celina Maria Frias Leal Martins</p>
+            <p><strong>Aluno:</strong> Marcio da Silva Eduardo</p>
+            <p><strong>Matrícula:</strong> 2017101545</p>
+            <p><strong>Curso:</strong> Engenharia da Computação – Empreendedorismo</p>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 2: DEFINIÇÃO ================= -->
+    <div class="slide-container content-slide">
+        <div class="header-bar">
+            <h2>Definição e Estratégia</h2>
+            <span>Etapas 1 e 2 do Trabalho</span>
+        </div>
+
+        <div class="two-columns">
+            <div class="info-card">
+                <h3><i class="fa-solid fa-rocket"></i> A Ideia (Opção B)</h3>
+                <p>
+                    Escolhemos a criação de um serviço do zero: <strong>TAS (Trust Assist System)</strong>.
+                    <br><br>
+                    Trata-se de uma plataforma SaaS (Software as a Service) voltada para a gestão profissional de
+                    chamados de TI. O foco é resolver a desorganização no atendimento de múltiplos clientes corporativos
+                    simultaneamente.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3><i class="fa-solid fa-star"></i> Diferencial Competitivo</h3>
+                <p>
+                    Ao contrário de ferramentas genéricas, o TAS nasce com arquitetura <strong>Multi-Tenant</strong>
+                    focada em segurança.
+                    <br><br>
+                    Nosso grande diferencial é a transparência radical no controle de <strong>SLAs (Prazos)</strong> e a
+                    hierarquia de segurança (RBAC), permitindo que MSPs (Prestadores de Serviços) gerenciem várias
+                    empresas em um único painel sem misturar dados.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SLIDE 3: CANVAS INTERATIVO ================= -->
+    <div class="slide-container" style="justify-content: flex-start;">
+        <div class="bmc-header">
+            <h2>Business Model Canvas</h2>
+            <span><i class="fa-solid fa-mouse-pointer"></i> CLIQUE NOS BLOCOS PARA DETALHES</span>
+        </div>
+
+        <div class="bmc-grid">
+
+            <!-- PARCEIROS -->
+            <div class="bmc-cell area-partners" onclick="showDetails('partners')">
+                <h3><i class="fa-solid fa-handshake"></i> Parceiros-Chave</h3>
+                <ul>
+                    <li>Provedores de Nuvem (AWS/Azure)</li>
+                    <li>Consultorias de TI (Revenda)</li>
+                    <li>Gateways de Pagamento</li>
+                </ul>
+                <div id="desc-partners" class="detail-content">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h2>Parceiros-Chave</h2>
+                    <p>Nossos parceiros estratégicos incluem provedores de infraestrutura em nuvem (como AWS ou Azure)
+                        para hospedar a aplicação Dockerizada e o banco de dados MySQL com alta disponibilidade. Também
+                        formaremos alianças com consultorias de TI que podem revender o TAS para seus clientes finais e
+                        gateways de pagamento para processar as assinaturas recorrentes com segurança.</p>
+                </div>
+            </div>
+
+            <!-- ATIVIDADES -->
+            <div class="bmc-cell area-activities" onclick="showDetails('activities')">
+                <h3><i class="fa-solid fa-gears"></i> Atividades-Chave</h3>
+                <ul>
+                    <li>Desenv. Software (DevOps)</li>
+                    <li>Suporte Técnico N2/N3</li>
+                    <li>Vendas B2B e Onboarding</li>
+                </ul>
+                <div id="desc-activities" class="detail-content">
+                    <i class="fa-solid fa-gears"></i>
+                    <h2>Atividades-Chave</h2>
+                    <p>A atividade central é o desenvolvimento e manutenção contínua da plataforma (Backend Java e
+                        Frontend React), garantindo estabilidade, segurança e novas funcionalidades. Além disso, o
+                        processo de "Onboarding" (treinamento inicial) dos novos clientes corporativos e o suporte
+                        técnico especializado para resolver dúvidas de uso são cruciais para a retenção.</p>
+                </div>
+            </div>
+
+            <!-- RECURSOS -->
+            <div class="bmc-cell area-resources" onclick="showDetails('resources')">
+                <h3><i class="fa-solid fa-microchip"></i> Recursos-Chave</h3>
+                <ul>
+                    <li>Equipe Fullstack</li>
+                    <li>Infra Servidores (Docker)</li>
+                    <li>Código Proprietário (PI)</li>
+                </ul>
+                <div id="desc-resources" class="detail-content">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Recursos-Chave</h2>
+                    <p>O recurso mais valioso é o capital intelectual: a equipe de desenvolvedores qualificados em Java,
+                        Spring Boot e React. Além do capital humano, a infraestrutura tecnológica robusta (servidores,
+                        containers Docker, banco de dados) e a propriedade intelectual do código-fonte do TAS são os
+                        ativos fundamentais para a operação do serviço.</p>
+                </div>
+            </div>
+
+            <!-- VALOR -->
+            <div class="bmc-cell area-value" onclick="showDetails('value')">
+                <h3><i class="fa-solid fa-gift"></i> Oferta de Valor</h3>
+                <ul>
+                    <li>Gestão centralizada</li>
+                    <li>Controle preciso de SLAs</li>
+                    <li>Transparência total</li>
+                    <li>Segurança (RBAC)</li>
+                </ul>
+                <div id="desc-value" class="detail-content">
+                    <i class="fa-solid fa-gift"></i>
+                    <h2>Oferta de Valor</h2>
+                    <p>O TAS entrega organização e confiança. Para gestores, oferecemos visibilidade total com
+                        Dashboards de métricas e controle de SLAs para evitar multas contratuais. Para técnicos,
+                        entregamos um fluxo de trabalho ágil para assumir e resolver tickets. Para o cliente final,
+                        garantimos transparência no acompanhamento de suas solicitações em um ambiente seguro.</p>
+                </div>
+            </div>
+
+            <!-- RELACIONAMENTO -->
+            <div class="bmc-cell area-relationships" onclick="showDetails('relationships')">
+                <h3><i class="fa-solid fa-heart"></i> Relacionamento</h3>
+                <ul>
+                    <li>Suporte Dedicado (CS)</li>
+                    <li>Portal Autoatendimento</li>
+                    <li>Feedback via Dashboard</li>
+                </ul>
+                <div id="desc-relationships" class="detail-content">
+                    <i class="fa-solid fa-heart"></i>
+                    <h2>Relacionamento com Cliente</h2>
+                    <p>Buscaremos um relacionamento de "parceria estratégica". Oferecemos um portal de autoatendimento
+                        para o dia a dia, mas mantemos gerentes de conta (Customer Success) para clientes maiores,
+                        garantindo que eles extraiam o máximo valor da ferramenta. A confiança é reforçada pela
+                        transparência nas métricas de atendimento apresentadas no Dashboard.</p>
+                </div>
+            </div>
+
+            <!-- CANAIS -->
+            <div class="bmc-cell area-channels" onclick="showDetails('channels')">
+                <h3><i class="fa-solid fa-truck"></i> Canais</h3>
+                <ul>
+                    <li>Plataforma Web (SaaS)</li>
+                    <li>Vendas Consultivas</li>
+                    <li>Indicações</li>
+                </ul>
+                <div id="desc-channels" class="detail-content">
+                    <i class="fa-solid fa-truck"></i>
+                    <h2>Canais de Venda</h2>
+                    <p>O serviço é acessado diretamente via navegador web (modelo SaaS). A aquisição de clientes será
+                        feita através de um site institucional com demonstrações do produto, além de uma equipe de
+                        vendas consultivas (Inside Sales) focada em abordar gestores de TI no LinkedIn e em eventos do
+                        setor de tecnologia.</p>
+                </div>
+            </div>
+
+            <!-- SEGMENTOS -->
+            <div class="bmc-cell area-segments" onclick="showDetails('segments')">
+                <h3><i class="fa-solid fa-users"></i> Segmentos</h3>
+                <ul>
+                    <li>MSPs (Outsourcing TI)</li>
+                    <li>Grandes Empresas</li>
+                    <li>Software Houses</li>
+                </ul>
+                <div id="desc-segments" class="detail-content">
+                    <i class="fa-solid fa-users"></i>
+                    <h2>Segmentos de Clientes</h2>
+                    <p>Não focamos no consumidor final (B2C), mas sim no mercado B2B. Nossos clientes ideais são
+                        Empresas de Serviços Gerenciados de TI (MSPs) que precisam cuidar de vários clientes ao mesmo
+                        tempo, e departamentos de TI internos de grandes corporações que necessitam organizar seus
+                        chamados internos e ativos com eficiência.</p>
+                </div>
+            </div>
+
+            <!-- CUSTOS -->
+            <div class="bmc-cell area-cost" onclick="showDetails('cost')">
+                <h3><i class="fa-solid fa-file-invoice-dollar"></i> Estrutura de Custos</h3>
+                <ul>
+                    <li>Salários Eng. e Vendas</li>
+                    <li>Hospedagem Cloud/DB</li>
+                    <li>Marketing e Ferramentas</li>
+                </ul>
+                <div id="desc-cost" class="detail-content">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <h2>Estrutura de Custos</h2>
+                    <p>Os custos são majoritariamente fixos e relacionados a pessoal: salários de desenvolvedores,
+                        suporte e equipe de vendas. Existem também custos variáveis de infraestrutura de nuvem (que
+                        escalam conforme o uso de dados e processamento) e investimentos em ferramentas de marketing e
+                        licenciamento de software.</p>
+                </div>
+            </div>
+
+            <!-- RECEITAS -->
+            <div class="bmc-cell area-revenue" onclick="showDetails('revenue')">
+                <h3><i class="fa-solid fa-cash-register"></i> Fontes de Receitas</h3>
+                <ul>
+                    <li>Assinatura Mensal (SaaS)</li>
+                    <li>Taxa de Setup</li>
+                    <li>Planos Enterprise</li>
+                </ul>
+                <div id="desc-revenue" class="detail-content">
+                    <i class="fa-solid fa-cash-register"></i>
+                    <h2>Fontes de Receitas</h2>
+                    <p>O modelo de receita é recorrente (Assinatura/SaaS). Cobraremos mensalidades baseadas no número de
+                        técnicos ou moderadores que utilizam a plataforma (licença por "assento"). Adicionalmente,
+                        podemos gerar receita extra com taxas de implantação (setup) para configurações complexas de
+                        grandes clientes e personalizações de SLA.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MODAL OVERLAY -->
+        <div class="modal-overlay" id="mainModal" onclick="closeModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeModalBtn()">&times;</span>
+                <div id="modal-body">
+                    <!-- Conteúdo entra aqui via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

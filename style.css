@@ -1,0 +1,362 @@
+/* --- 1. CONFIGURAÇÕES GERAIS --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2e8f0;
+    margin: 0;
+    padding: 40px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    gap: 40px;
+}
+
+/* --- 2. CONTAINER DOS SLIDES --- */
+.slide-container {
+    width: 1280px;
+    height: 720px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* --- 3. CORES E TIPOGRAFIA --- */
+:root {
+    --primary: #0f172a;
+    /* Azul Escuro */
+    --accent: #2563eb;
+    /* Azul Vibrante */
+    --text-main: #334155;
+    --bg-light: #f8fafc;
+    --border: #cbd5e1;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+p,
+li {
+    line-height: 1.5;
+    color: var(--text-main);
+}
+
+/* --- 4. LAYOUT DO SLIDE 1 (CAPA) --- */
+.title-slide {
+    background: linear-gradient(135deg, #020617 0%, #1e293b 100%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.title-slide h1 {
+    font-size: 90px;
+    letter-spacing: -3px;
+    margin: 0;
+    line-height: 1;
+}
+
+.title-slide h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #94a3b8;
+    letter-spacing: 8px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+/* Estilo restaurado da primeira versão (limpo e centralizado) */
+.student-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 30px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.student-info p {
+    color: #cbd5e1;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 300;
+    text-align: left;
+}
+
+.student-info strong {
+    color: var(--accent);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* --- 5. LAYOUT DO SLIDE 2 (DEFINIÇÃO) --- */
+.content-slide {
+    padding: 50px 60px;
+}
+
+.header-bar {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    border-left: 6px solid var(--accent);
+}
+
+.header-bar h2 {
+    font-size: 36px;
+    color: var(--primary);
+}
+
+.header-bar span {
+    font-size: 16px;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    height: 100%;
+}
+
+.info-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card h3 {
+    font-size: 22px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card p {
+    font-size: 18px;
+    text-align: justify;
+    margin: 0;
+}
+
+/* --- 6. LAYOUT DO SLIDE 3 (BMC) --- */
+.bmc-header {
+    padding: 15px 30px;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bmc-header h2 {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.bmc-header span {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 700;
+    background: #eff6ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.bmc-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    padding: 15px;
+    height: 100%;
+    background-color: #f1f5f9;
+}
+
+.bmc-cell {
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.bmc-cell:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+    transform: translateY(-3px);
+    z-index: 10;
+}
+
+.bmc-cell h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 6px;
+}
+
+.bmc-cell ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bmc-cell li {
+    font-size: 11px;
+    margin-bottom: 4px;
+    padding-left: 10px;
+    position: relative;
+    color: #334155;
+}
+
+.bmc-cell li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* --- POSICIONAMENTO NO GRID --- */
+.area-partners {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.area-activities {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+.area-resources {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+}
+
+.area-value {
+    grid-column: 5 / 7;
+    grid-row: 1 / 3;
+    background-color: #f8fafc;
+    border: 2px solid #e2e8f0;
+}
+
+.area-relationships {
+    grid-column: 7 / 9;
+    grid-row: 1 / 2;
+}
+
+.area-channels {
+    grid-column: 7 / 9;
+    grid-row: 2 / 3;
+}
+
+.area-segments {
+    grid-column: 9 / 11;
+    grid-row: 1 / 3;
+}
+
+.area-cost {
+    grid-column: 1 / 6;
+    grid-row: 3 / 4;
+}
+
+.area-revenue {
+    grid-column: 6 / 11;
+    grid-row: 3 / 4;
+}
+
+/* --- MODAL --- */
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    width: 70%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border-left: 8px solid var(--accent);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    text-align: justify;
+    color: #475569;
+}
+
+.close-btn {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #94a3b8;
+    line-height: 20px;
+}
+
+.close-btn:hover {
+    color: #ef4444;
+}
+
+.detail-content {
+    display: none;
+}
